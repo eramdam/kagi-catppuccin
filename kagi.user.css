@@ -2,16 +2,16 @@
 @name Kagi Catppuccin
 @namespace github.com/catppuccin/kagi
 @homepageURL https://github.com/eramdam/kagi-catppuccin
-@version 0.0.2
+@version 0.0.3
 @description Soothing pastel theme for Kagi
 @author eramdam
 @license MIT
 @updateURL   https://github.com/eramdam/kagi-catppuccin/raw/main/kagi.user.css
 ==/UserStyle== */
 
-@import url("https://unpkg.com/@catppuccin/palette/css/catppuccin.css");
-
-@-moz-document regexp("https?:\\/\\/kagi.com\\/.*") {
+@-moz-document regexp("https://kagi.com/.*$")
+{
+  @import url("https://unpkg.com/@catppuccin/palette/css/catppuccin.css");
   .theme_dark {
     /* Don't know where all of these are used 🤷 */
     /* --cheatsh_background: #22242f; */
