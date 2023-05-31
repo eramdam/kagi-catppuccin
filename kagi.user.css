@@ -1,9 +1,12 @@
 /* ==UserStyle==
-@name           Cappuccin for Kagi  
-@namespace      github.com/openstyles/stylus
-@version        0.0.1
-@description    A soothing theme for Kagi
-@author         Eramdam
+@name Kagi Catppuccin
+@namespace github.com/catppuccin/kagi
+@homepageURL https://github.com/eramdam/kagi-catppuccin
+@version 0.0.2
+@description Soothing pastel theme for Kagi
+@author eramdam
+@license MIT
+@updateURL   https://github.com/eramdam/kagi-catppuccin/raw/main/kagi.user.css
 ==/UserStyle== */
 
 @import url("https://unpkg.com/@catppuccin/palette/css/catppuccin.css");
