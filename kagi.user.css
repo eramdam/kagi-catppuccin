@@ -2,7 +2,7 @@
 @name Kagi Catppuccin
 @namespace github.com/catppuccin/kagi
 @homepageURL https://github.com/eramdam/kagi-catppuccin
-@version 0.0.4
+@version 0.0.5
 @description Soothing pastel theme for Kagi
 @author eramdam
 @license MIT
@@ -593,6 +593,7 @@
     --page-text-color: var(--ctp-latte-text);
     --kagi-accent: var(--ctp-latte-crust);
     --color-primary: var(--ctp-latte-text);
+
     --color-primary-dim_1: rgba(var(--ctp-latte-text-raw), 0.1);
     --color-primary-dim_2: rgba(var(--ctp-latte-text-raw), 0.2);
     --color-primary-dim_25: rgba(var(--ctp-latte-text-raw), 0.25);
@@ -603,6 +604,7 @@
     --color-primary-dim_7: rgba(var(--ctp-latte-text-raw), 0.7);
     --color-primary-dim_8: rgba(var(--ctp-latte-text-raw), 0.8);
     --color-primary-dim_9: rgba(var(--ctp-latte-text-raw), 0.9);
+    --search-result-content-text: var(--color-primary-dim_7);
     --color-secondary: rgb(var(--ctp-latte-mantle-raw));
     --color-secondary-dim_1: rgba(var(--ctp-latte-mantle-raw), 0.1);
     --color-secondary-dim_2: rgba(var(--ctp-latte-mantle-raw), 0.2);
