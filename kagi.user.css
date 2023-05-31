@@ -1,0 +1,292 @@
+/* ==UserStyle==
+@name           Cappuccin for Kagi  
+@namespace      github.com/openstyles/stylus
+@version        0.0.1
+@description    A soothing theme for Kagi
+@author         Eramdam
+==/UserStyle== */
+
+@import url("https://unpkg.com/@catppuccin/palette/css/catppuccin.css");
+
+@-moz-document regexp("https?:\\/\\/kagi.com\\/.*") {
+  .theme_dark {
+    /* Don't know where all of these are used 🤷 */
+    /* --cheatsh_background: #22242f; */
+    /* --cheatsh_ef186: #d7d787; */
+    /* --cheatsh_ef15: #fdf6e3; */
+    /* --cheatsh_ef148: #afd700; */
+    /* --cheatsh_ef81: #5fd7ff; */
+    /* --cc-filters-active-bg: #404040; */
+    /* --app-sidebar-bg: var(--ctp-mocha-mantle); */
+    /* --app-sidebar-item-border: rgba(229, 229, 229, 0.1); */
+    /* --app-sidebar-link: var(--color-primary-dim_5); */
+    /* --app-sidebar-nav-item-bg_hover: #ffb319; */
+    /* --app-sidebar-nav-item-link_hover: var(--app-sidebar-bg); */
+    /* --app-sidebar-nav-item-icon_hover: var(--color-primary); */
+    /* --app-sidebar-lense-link: var(--color-primary-dim_5); */
+    /* --app-sidebar-lense-link_hover: #ffffff; */
+    /* --result-item-highlight: #9debfe; */
+    /* --provider-breakdown_server: #075067; */
+    /* --provider-breakdown_client: #9b6400; */
+    /* --provider-breakdown_speed1: #6f6d22; */
+    /* --provider-breakdown_speed2: #ab5a5a; */
+    /* --provider-breakdown_speed3: #812503; */
+    /* --toggle-switch-knob-bg: #262837; */
+    /* --widget-progress_bar: #e5e5e5; */
+    /* --translate-fc_icon: #777676; */
+    /* --rating-star_background: #666666; */
+    /* --color-primary-dim_3_solid: #434551; */
+    /* --app-logo: #191919; */
+    /* --app-logo-bg: #ffb319; */
+
+    /* Design system */
+    --background-color: var(--ctp-mocha-base);
+    --background-color-dim_3: rgba(var(--ctp-mocha-base-raw), 0.3);
+    --background-color_opac: rgba(var(--ctp-mocha-base-raw), 0);
+    --color-search-input-opac: rgba(var(--ctp-mocha-base-raw), 0);
+    --page-text-color: var(--ctp-mocha-text);
+    --kagi-accent: var(--ctp-mocha-crust);
+    --color-primary: var(--ctp-mocha-text);
+    --color-primary-dim_1: rgba(var(--ctp-mocha-text-raw), 0.1);
+    --color-primary-dim_2: rgba(var(--ctp-mocha-text-raw), 0.2);
+    --color-primary-dim_25: rgba(var(--ctp-mocha-text-raw), 0.25);
+    --color-primary-dim_3: rgba(var(--ctp-mocha-text-raw), 0.3);
+    --color-primary-dim_4: rgba(var(--ctp-mocha-text-raw), 0.4);
+    --color-primary-dim_5: rgba(var(--ctp-mocha-text-raw), 0.5);
+    --color-primary-dim_6: rgba(var(--ctp-mocha-text-raw), 0.6);
+    --color-primary-dim_7: rgba(var(--ctp-mocha-text-raw), 0.7);
+    --color-primary-dim_8: rgba(var(--ctp-mocha-text-raw), 0.8);
+    --color-primary-dim_9: rgba(var(--ctp-mocha-text-raw), 0.9);
+    --color-secondary: rgb(var(--ctp-mocha-mantle-raw));
+    --color-secondary-dim_1: rgba(var(--ctp-mocha-mantle-raw), 0.1);
+    --color-secondary-dim_2: rgba(var(--ctp-mocha-mantle-raw), 0.2);
+    --color-secondary-dim_4: rgba(var(--ctp-mocha-mantle-raw), 0.4);
+    --color-secondary-dim_5: rgba(var(--ctp-mocha-mantle-raw), 0.5);
+    --color-secondary-dim_6: rgba(var(--ctp-mocha-mantle-raw), 0.6);
+    --color-secondary-dim_7: rgba(var(--ctp-mocha-mantle-raw), 0.7);
+    --color-secondary-dim_8: rgba(var(--ctp-mocha-mantle-raw), 0.8);
+    --color-secondary-dim_9: rgba(var(--ctp-mocha-mantle-raw), 0.9);
+
+    --color_link: var(--ctp-mocha-blue);
+    --color-primary_hover: var(--ctp-mocha-sky);
+    --color-primary_visited: var(--ctp-mocha-lavender);
+    --input-bg: var(--kagi-accent);
+    --resultsummary-highlight: var(--ctp-mocha-sapphire);
+
+    /* Color of dog logo on "not found" page */
+    --doggo-color-1: var(--ctp-mocha-subtext1);
+
+    /* Background of dog logo at the top left */
+    --doggo-bg-color: var(--ctp-mocha-surface0);
+
+    /* Seems to be related to `example_results_buttons` but I'm not sure how to display them... */
+    /* --tabs-round-bg: #1d1f29; */
+    --tabs-round-active-bg: rgba(var(--ctp-mocha-surface2-raw), 0.25);
+
+    /* Header. */
+    --header-bg: var(--ctp-mocha-mantle);
+    --header-bg-opac: rgba(var(--ctp-mocha-mantle-raw), 0);
+    --header-border: var(--ctp-mocha-subtext0);
+
+    /* Footer */
+    --footer-bg: var(--ctp-mocha-mantle);
+
+    /* "Control Center" dropdowns...? (unchanged for now) */
+    --control-center-dd-bg: #161820;
+    --control-center-dd-bg_hover: #161820;
+    --control-center-dd-list: #161820;
+    --control-center-dd-list-bg_hover: #1d1f29;
+    --control-center-dd-border: #43465b;
+
+    /* Control Center general */
+    --control-center-bg: var(--ctp-mocha-mantle);
+
+    /* Dropdown items */
+    --dd-hover-bg: var(--ctp-mocha-crust);
+    --dd-list-input-bg: var(--ctp-mocha-mantle);
+    --not-found-bubble-bg: var(--color-secondary);
+
+    /* HTTPS label inside the "shield" popup  */
+    --ranked-box-connection-secure: var(--ctp-mocha-green);
+    --ranked-box-connection-insecure: var(--ctp-mocha-peach);
+
+    /* Segmented control */
+    --btn-group-bg: var(--ctp-mocha-base);
+
+    /* Result items */
+    --result-item-title-border: rgba(var(--ctp-mocha-text-raw), 0.5);
+    --result-item-title-border_hover: rgba(var(--ctp-mocha-sky-raw), 0.5);
+    --search-result-title: var(--ctp-mocha-text);
+    --search-result-date-bg: rgba(var(--ctp-mocha-surface2-raw), 0.25);
+    --search-result-date-new-bg: var(--ctp-mocha-surface2);
+    --search-result-date-new: var(--ctp-mocha-text);
+    --inline-header-title: var(--ctp-mocha-text);
+    --inline-widget-bg: var(--ctp-mocha-surface0);
+    --inline-header-border: rgba(var(--ctp-mocha-text-raw), 0.5);
+    --inline-domain-tag-bg: rgba(var(--ctp-mocha-surface2-raw), 0.25);
+    --related-item-bg: var(--ctp-mocha-mantle);
+
+    /* Auto suggestions in footer */
+    --auto-sugg-bg_hover: rgba(var(--ctp-mocha-crust-raw), 0.5);
+
+    /* Videos. */
+    --video-item-bg: var(--ctp-mocha-crust);
+
+    /* Wikipedia box. */
+    --wiki-title: var(--ctp-mocha-text);
+    --wiki-content-links: var(--ctp-mocha-text);
+
+    /* Codeblocks */
+    --code-bg: var(--ctp-mocha-mantle);
+    --code-border: var(--ctp-mocha-surface1);
+    --code-k: var(--ctp-mocha-red);
+    --code-s: var(--ctp-mocha-green);
+    --code-cm-c1: var(--ctp-mocha-peach);
+    --code-n: var(--ctp-mocha-maroon);
+    --code-p: var(--ctp-mocha-overlay2);
+
+    /* Navigation lines */
+    --nav_n_im_line: var(--ctp-mocha-blue);
+    --nav_n_ma_line: var(--ctp-mocha-green);
+    --nav_n_ne_line: var(--ctp-mocha-mauve);
+    --nav_n_se_line: var(--ctp-mocha-yellow);
+    --nav_n_vi_line: var(--ctp-mocha-red);
+
+    --domain-rank-icon-color-scam: var(--ctp-mocha-red);
+    --domain-rank-icon-color-trackers: var(--ctp-mocha-peach);
+  }
+
+  .theme_dark .k_ui_toggle_switch {
+    --active-bg-color: var(--ctp-mocha-green);
+  }
+
+  .theme_dark .widget_codeblock .nb {
+    color: var(--ctp-mocha-text);
+  }
+
+  .theme_light {
+    /* Design system */
+    --background-color: var(--ctp-latte-base);
+    --background-color-dim_3: rgba(var(--ctp-latte-base-raw), 0.3);
+    --background-color_opac: rgba(var(--ctp-latte-base-raw), 0);
+    --color-search-input-opac: rgba(var(--ctp-latte-base-raw), 0);
+    --page-text-color: var(--ctp-latte-text);
+    --kagi-accent: var(--ctp-latte-crust);
+    --color-primary: var(--ctp-latte-text);
+    --color-primary-dim_1: rgba(var(--ctp-latte-text-raw), 0.1);
+    --color-primary-dim_2: rgba(var(--ctp-latte-text-raw), 0.2);
+    --color-primary-dim_25: rgba(var(--ctp-latte-text-raw), 0.25);
+    --color-primary-dim_3: rgba(var(--ctp-latte-text-raw), 0.3);
+    --color-primary-dim_4: rgba(var(--ctp-latte-text-raw), 0.4);
+    --color-primary-dim_5: rgba(var(--ctp-latte-text-raw), 0.5);
+    --color-primary-dim_6: rgba(var(--ctp-latte-text-raw), 0.6);
+    --color-primary-dim_7: rgba(var(--ctp-latte-text-raw), 0.7);
+    --color-primary-dim_8: rgba(var(--ctp-latte-text-raw), 0.8);
+    --color-primary-dim_9: rgba(var(--ctp-latte-text-raw), 0.9);
+    --color-secondary: rgb(var(--ctp-latte-mantle-raw));
+    --color-secondary-dim_1: rgba(var(--ctp-latte-mantle-raw), 0.1);
+    --color-secondary-dim_2: rgba(var(--ctp-latte-mantle-raw), 0.2);
+    --color-secondary-dim_4: rgba(var(--ctp-latte-mantle-raw), 0.4);
+    --color-secondary-dim_5: rgba(var(--ctp-latte-mantle-raw), 0.5);
+    --color-secondary-dim_6: rgba(var(--ctp-latte-mantle-raw), 0.6);
+    --color-secondary-dim_7: rgba(var(--ctp-latte-mantle-raw), 0.7);
+    --color-secondary-dim_8: rgba(var(--ctp-latte-mantle-raw), 0.8);
+    --color-secondary-dim_9: rgba(var(--ctp-latte-mantle-raw), 0.9);
+
+    --color_link: var(--ctp-latte-blue);
+    --color-primary_hover: var(--ctp-latte-sky);
+    --color-primary_visited: var(--ctp-latte-lavender);
+    --input-bg: var(--kagi-accent);
+    --resultsummary-highlight: var(--ctp-latte-sapphire);
+
+    /* Color of dog logo on "not found" page */
+    --doggo-color-1: var(--ctp-latte-subtext1);
+
+    /* Background of dog logo at the top left */
+    --doggo-bg-color: var(--ctp-latte-surface0);
+
+    /* Seems to be related to `example_results_buttons` but I'm not sure how to display them... */
+    /* --tabs-round-bg: #1d1f29; */
+    --tabs-round-active-bg: rgba(var(--ctp-latte-surface2-raw), 0.25);
+
+    /* Header. */
+    --header-bg: var(--ctp-latte-mantle);
+    --header-bg-opac: rgba(var(--ctp-latte-mantle-raw), 0);
+    --header-border: var(--ctp-latte-subtext0);
+
+    /* Footer */
+    --footer-bg: var(--ctp-latte-mantle);
+
+    /* "Control Center" dropdowns...? (unchanged for now) */
+    --control-center-dd-bg: #161820;
+    --control-center-dd-bg_hover: #161820;
+    --control-center-dd-list: #161820;
+    --control-center-dd-list-bg_hover: #1d1f29;
+    --control-center-dd-border: #43465b;
+
+    /* Control Center general */
+    --control-center-bg: var(--ctp-latte-mantle);
+
+    /* Dropdown items */
+    --dd-hover-bg: var(--ctp-latte-crust);
+    --dd-list-input-bg: var(--ctp-latte-mantle);
+    --not-found-bubble-bg: var(--color-secondary);
+
+    /* HTTPS label inside the "shield" popup  */
+    --ranked-box-connection-secure: var(--ctp-latte-green);
+    --ranked-box-connection-insecure: var(--ctp-latte-peach);
+
+    /* Segmented control */
+    --btn-group-bg: var(--ctp-latte-base);
+
+    /* Result items */
+    --result-item-title-border: rgba(var(--ctp-latte-text-raw), 0.5);
+    --result-item-title-border_hover: rgba(var(--ctp-latte-sky-raw), 0.5);
+    --search-result-title: var(--ctp-latte-text);
+    --search-result-date-bg: rgba(var(--ctp-latte-surface2-raw), 0.25);
+    --search-result-date-new-bg: var(--ctp-latte-surface2);
+    --search-result-date-new: var(--ctp-latte-text);
+    --inline-header-title: var(--ctp-latte-text);
+    --inline-widget-bg: var(--ctp-latte-surface0);
+    --inline-header-border: rgba(var(--ctp-latte-text-raw), 0.5);
+    --inline-domain-tag-bg: rgba(var(--ctp-latte-surface2-raw), 0.25);
+    --related-item-bg: var(--ctp-latte-mantle);
+
+    /* Auto suggestions in footer */
+    --auto-sugg-bg_hover: rgba(var(--ctp-latte-crust-raw), 0.5);
+
+    /* Videos. */
+    --video-item-bg: var(--ctp-latte-crust);
+
+    /* Wikipedia box. */
+    --wiki-title: var(--ctp-latte-text);
+    --wiki-content-links: var(--ctp-latte-text);
+
+    /* Codeblocks */
+    --code-bg: var(--ctp-latte-mantle);
+    --code-border: var(--ctp-latte-surface1);
+    --code-k: var(--ctp-latte-red);
+    --code-s: var(--ctp-latte-green);
+    --code-cm-c1: var(--ctp-latte-peach);
+    --code-n: var(--ctp-latte-maroon);
+    --code-p: var(--ctp-latte-overlay2);
+
+    /* Navigation lines */
+    --nav_n_im_line: var(--ctp-latte-blue);
+    --nav_n_ma_line: var(--ctp-latte-green);
+    --nav_n_ne_line: var(--ctp-latte-mauve);
+    --nav_n_se_line: var(--ctp-latte-yellow);
+    --nav_n_vi_line: var(--ctp-latte-red);
+
+    --domain-rank-icon-color-scam: var(--ctp-latte-red);
+    --domain-rank-icon-color-trackers: var(--ctp-latte-peach);
+  }
+
+  .theme_light .k_ui_toggle_switch {
+    --active-bg-color: var(--ctp-latte-green);
+  }
+
+  .theme_light .widget_codeblock .nb {
+    color: var(--ctp-latte-text);
+  }
+}
